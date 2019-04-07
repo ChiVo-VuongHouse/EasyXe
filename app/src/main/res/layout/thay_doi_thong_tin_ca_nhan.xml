@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    // Tỉ lệ 9
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            // Tên hiển thị
+            <TextView
+                android:id="@+id/txtTenHienThi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtTenHienThi"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/edtTenHienThi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            // Số điện thoại
+            <TextView
+                android:id="@+id/txtSDT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtSDT"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/edtST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            // Địa chỉ
+            <TextView
+                android:id="@+id/txtDiaChi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtDiaChi"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/edtDiaChi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            // Email
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtEmail"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+
+            // Ngày sinh
+            <TextView
+                android:id="@+id/txtNgaySinh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtNgaySinh"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/edtNgaySinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"/>
+
+            <TextView
+                android:id="@+id/txtGT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtGT"
+                android:textSize="18sp"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radbtnNu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtNu"
+                    android:textSize="18sp"/>
+                <RadioButton
+                    android:id="@+id/radbtnNam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtNam"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="120dp"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    // Tỉ lệ 1
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnXong"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtXong"
+            android:background="@color/btnXong"
+            android:textColor="@color/txtXong"/>
+    </LinearLayout>
+
+</LinearLayout>

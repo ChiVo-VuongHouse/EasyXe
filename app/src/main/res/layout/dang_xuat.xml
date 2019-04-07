@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDangNhap"
+        app:srcCompat="@drawable/sell_car" />
+
+    <Button
+        android:id="@+id/btnDangNhap"
+        android:layout_marginLeft="75dp"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boderbutton"
+        android:drawableRight="@drawable/dangnhap"
+        android:gravity="center"
+        android:paddingRight="15dp"
+        android:text="@string/txtDangNhap"
+        android:textColor="@color/txtDN"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnDangKy"
+        android:layout_width="205dp"
+        android:layout_marginLeft="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/boderbutton"
+        android:drawableRight="@drawable/dangky"
+        android:gravity="center"
+        android:paddingRight="15dp"
+        android:text="@string/txtDangKy"
+        android:textColor="@color/txtDN"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnFaceBook"
+        android:layout_width="205dp"
+        android:layout_marginLeft="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/boderbutton"
+        android:drawableRight="@drawable/facebook"
+        android:gravity="center"
+        android:paddingRight="10dp"
+        android:text="@string/txtDNFace"
+        android:textColor="@color/txtDN"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="right"
+        android:text="@string/txtSkip"
+        android:textColor="@color/txtSkip"
+        android:background="@color/btnSkip"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

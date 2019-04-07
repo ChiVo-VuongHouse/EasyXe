@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/marginApp"
+    android:gravity="center"
+    android:background="@color/backgroundApp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/img_margin_top"
+            android:layout_marginRight="@dimen/img_margin_right"
+            android:src="@drawable/user" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txtColor"
+            android:layout_marginRight="39dp"
+            android:text="@string/register_name" />
+
+        <EditText
+            android:id="@+id/edt_register_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/img_margin_top"
+            android:layout_marginRight="@dimen/img_margin_right"
+            android:src="@drawable/phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txtColor"
+            android:layout_marginRight="50dp"
+            android:text="@string/register_phone" />
+
+        <EditText
+            android:id="@+id/edt_register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/img_margin_top"
+            android:layout_marginRight="@dimen/img_margin_right"
+            android:src="@drawable/keypass" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txtColor"
+            android:layout_marginRight="75dp"
+            android:text="@string/register_pass" />
+
+        <EditText
+            android:id="@+id/edt_register_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/img_margin_top"
+            android:layout_marginRight="@dimen/img_margin_right"
+            android:src="@drawable/keypass" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txtColor"
+            android:layout_marginRight="20dp"
+            android:text="@string/register_re_pass" />
+
+        <EditText
+            android:id="@+id/edt_register_re_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/marginApp"
+        android:background="@drawable/boderbutton"
+        android:text="@string/btn_register"
+        android:fontFamily="@font/tahomabd"
+        android:textColor="@color/txtColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/boderbutton"
+            android:text="@string/btn_clear"
+            android:textColor="@color/txtColor" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/btn_cancel"
+            android:background="@drawable/boderbutton"
+            android:textColor="@color/txtColor" />
+
+    </LinearLayout>
+
+</LinearLayout>
