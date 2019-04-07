@@ -6,11 +6,10 @@
         android:id="@+id/action_bar_search"
         android:icon="@drawable/ic_search"
         android:title="Tìm kiếm"
-        app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="always"/>
+        app:actionViewClass="android.widget.SearchView" />
     <item
         android:id="@+id/action_bar_settings"
         android:icon="@drawable/ic_setting"
         android:title="Cài đặt"
-         />
+        app:showAsAction="never" />
 </menu>

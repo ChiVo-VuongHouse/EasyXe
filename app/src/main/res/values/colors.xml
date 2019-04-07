@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="backgroundApp">#FFFFFF</color>
+
+    <color name="btnDangNhap">#00EE00</color>
+    <color name="btnFace">#171ea6</color>
+    <color name="txtDN">#FFFFFF</color>
+    <color name="btnSkip">#ffffff</color>
+    <color name="txtSkip">#171EA6</color>
+    <color name="btnXong">#3366FF</color>
+    <color name="txtXong">#FFFFFF</color>
+    <color name="color_btnLogin">#0000FF</color>
+    <color name="color_btn_cancel">#FF3300</color>
+    <color name="txtColor">#FFFFFF</color>
+
 </resources>
