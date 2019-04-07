@@ -37,6 +37,12 @@
     <string name="register_re_pass">Nhập lại mật khẩu</string>
     <string name="btn_register">Đăng ký</string>
     <string name="btn_clear">Đặt lại</string>
-    <string name="hint_login_name">Nhập số điện thoại…</string>
-    <string name="hint_login_pass">Nhập mật khẩu…</string>
+    <string name="hint_login_name">Nhập số điện thoại...</string>
+    <string name="hint_login_pass">Nhập mật khẩu...</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_more">More</string>
+
 </resources>
