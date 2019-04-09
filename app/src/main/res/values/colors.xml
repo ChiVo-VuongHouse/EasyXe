@@ -17,4 +17,8 @@
     <color name="color_btn_cancel">#FF3300</color>
     <color name="txtColor">#FFFFFF</color>
 
+    <color name="color_appbar">#8AC544</color>
+    <color name="color_spinner">#ADADAD</color>
+    <color name="color_btn_submit">#00BCD4</color>
+
 </resources>

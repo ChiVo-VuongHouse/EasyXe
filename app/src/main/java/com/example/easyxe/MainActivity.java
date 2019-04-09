@@ -1,6 +1,5 @@
 package com.example.easyxe;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,8 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -133,9 +130,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_setting:
                 fragment = new ThayDoiThongTinCaNhan();
                 break;
-            case R.id.nav_product:
-                fragment = new SanPhamDangBan();
-                break;
+
         }
         if (fragment != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();

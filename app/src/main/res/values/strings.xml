@@ -45,4 +45,30 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_more">More</string>
 
+    <string name="tv_detail">Mô tả chi tiết</string>
+    <string name="tv_phone">Số điện thoại liên lạc</string>
+    <string name="tv_delivery">Địa chỉ giao hàng(nếu có)</string>
+    <string name="btn_submit">Đăng</string>
+    <string name="appBar_Sell_Product">Đăng bán sản phẩm</string>
+
+    //Spinner
+    <string-array name="array_Car">
+        <item>Chọn loại xe</item>
+        <item>Xe máy</item>
+        <item>Xe tải</item>
+        <item>Xe điện</item>
+        <item>Xe đạp</item>
+        <item>Ô tô</item>
+        <item>Phương tiện khác</item>
+    </string-array>
+
+    <string-array name="array_Address">
+        <item>Chọn địa điểm</item>
+        <item>An Giang</item>
+        <item>Cà Mau</item>
+        <item>Bạc Liêu</item>
+        <item>Sóc Trăng</item>
+        <item>Tiền Giang</item>
+    </string-array>
+
 </resources>
