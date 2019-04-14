@@ -70,5 +70,7 @@
         <item>Sóc Trăng</item>
         <item>Tiền Giang</item>
     </string-array>
+    <string name="title_activity_screen19">Screen19Activity</string>
+    <string name="toolbar_title_19">Sửa thông tin cá nhân</string>
 
 </resources>

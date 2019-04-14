@@ -1,5 +1,6 @@
 package com.example.easyxe;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -128,7 +129,8 @@ public class MainActivity extends AppCompatActivity
                 fragment = new DanhGia();
                 break;
             case R.id.nav_setting:
-                fragment = new ThayDoiThongTinCaNhan();
+                Intent intent4 = new Intent(getApplication(),Screen19Activity.class);
+                startActivity(intent4);
                 break;
 
         }

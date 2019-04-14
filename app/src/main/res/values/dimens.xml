@@ -12,6 +12,7 @@
     <dimen name="img_margin_top">15dp</dimen>
     <dimen name="img_margin_right">5dp</dimen>
     <dimen name="btn_submit">18sp</dimen>
+    <dimen name="small_margin">8dp</dimen>
 
 
 </resources>

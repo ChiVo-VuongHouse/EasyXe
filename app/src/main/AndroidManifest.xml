@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MHDangKy"></activity>
+
+
+
+        <activity android:name=".MHDangKy" />
         <activity android:name=".MHDangNhap" />
+
+        <!--MAIN-->
         <activity
             android:name=".MainActivity"
             android:label="EasyXE"
@@ -21,6 +26,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--SCREEN19-->
+        <activity
+            android:name=".Screen19Activity"
+            android:label="@string/title_activity_screen19"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.easyxe.MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>
