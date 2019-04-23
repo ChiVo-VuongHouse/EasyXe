@@ -37,8 +37,8 @@
     <string name="register_re_pass">Nhập lại mật khẩu</string>
     <string name="btn_register">Đăng ký</string>
     <string name="btn_clear">Đặt lại</string>
-    <string name="hint_login_name">Nhập số điện thoại...</string>
-    <string name="hint_login_pass">Nhập mật khẩu...</string>
+    <string name="hint_login_name">Nhập số điện thoại</string>
+    <string name="hint_login_pass">Nhập mật khẩu</string>
 
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -50,6 +50,8 @@
     <string name="tv_delivery">Địa chỉ giao hàng(nếu có)</string>
     <string name="btn_submit">Đăng</string>
     <string name="appBar_Sell_Product">Đăng bán sản phẩm</string>
+    <string name="imgCar">Hình ảnh cần đăng bán</string>
+    <string name="iconBack">Nút trở về màn hình vừa chuyển</string>
 
     //Spinner
     <string-array name="array_Car">
