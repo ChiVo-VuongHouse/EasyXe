@@ -7,8 +7,6 @@
     android:orientation="vertical"
     tools:context=".SellProductActivity">
 
-    //AppBar layout
-
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -28,16 +26,18 @@
                     android:id="@+id/tb_img_back"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center|left"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
                     android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/iconBack"
                     android:src="@drawable/ic_chevron_left_black_24dp" />
 
                 <TextView
                     android:id="@+id/tb_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center|left"
+                    android:layout_gravity="center"
                     android:layout_weight="10"
                     android:text="@string/appBar_Sell_Product"
                     android:textColor="@color/txtColor"
@@ -60,9 +60,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/imgCar"
             android:src="@drawable/ic_launcher_background" />
 
-        //Spinner
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -75,80 +76,60 @@
                 android:layout_width="340dp"
                 android:layout_height="46dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/bg_spinner"></Spinner>
+                android:layout_marginBottom="10dp"></Spinner>
 
             <Spinner
                 android:id="@+id/spinAddress"
                 android:layout_width="340dp"
-                android:layout_height="46dp"
-                android:background="@drawable/bg_spinner"></Spinner>
+                android:layout_height="46dp"></Spinner>
         </LinearLayout>
 
-        //Description detail
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_detail" />
-
-            <EditText
-                android:id="@+id/edt_detail"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edt_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/tv_detail"/>
+            </android.support.design.widget.TextInputLayout>
 
-        //Phone number
 
-        <LinearLayout
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_phone" />
-
-            <EditText
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/edt_phone_contact"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:hint="@string/tv_phone"/>
+        </android.support.design.widget.TextInputLayout>
 
-        //Delivery address
 
-        <LinearLayout
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_delivery" />
-
-            <EditText
-                android:id="@+id/edt_delivery"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edt_address_delivery"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:hint="@string/tv_delivery"/>
+        </android.support.design.widget.TextInputLayout>
 
-        //Submit
 
         <Button
             android:layout_width="140dp"
             android:layout_height="50dp"
             android:background="@color/color_btn_submit"
             android:clickable="true"
+            android:focusable="true"
             android:text="@string/btn_submit"
             android:textColor="@color/txtColor"
             android:textSize="@dimen/btn_submit"
