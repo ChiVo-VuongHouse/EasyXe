@@ -68,10 +68,10 @@ public class CustomListAdapter extends BaseAdapter {
         holder.name.setText(product.name);
         holder.price.setText(product.price + " đ");
         holder.location.setText(product.location);
+        holder.product_thumbnail.setImageResource(product.getImage());
+        //int imageId = this.getMipmapResIdByName(product.image);
 
-        int imageId = this.getMipmapResIdByName(product.image);
-
-        holder.product_thumbnail.setImageResource(imageId);
+        //holder.product_thumbnail.setImageResource(imageId);
 
         return convertView;
     }

@@ -1,17 +1,27 @@
 package com.example.easyxe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.List;
 
 
 public class Screen19Activity extends AppCompatActivity {
+    Button btnOK;
+    List<User> mData;
+    TextInputEditText mAdName;
+    TextInputEditText mAdAdress;
+    TextInputEditText mPhone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +34,32 @@ public class Screen19Activity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_chevron_left_black_24dp);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        getBundleData();
+
+    }
+
+    public void getBundleData()
+    {
+        btnOK = findViewById(R.id.btnOK);
+        mAdName = findViewById(R.id.etName);
+        mAdAdress = findViewById(R.id.etAddress);
+        mPhone = findViewById(R.id.etPhone);
+
+
+        Intent intent = getIntent();
+        mData = intent.getParcelableArrayListExtra("data");
+        if (mData!=null)
+        {
+            mAdName.setText(mData.get(0).getmUserName());
+            mAdAdress.setText(mData.get(0).getmUserLocation());
+
+            mPhone.setText(mData.get(0).getmUserPhone());
+        }else
+        {
+            mAdName.setText("k data");
+        }
+
     }
 
     @Override

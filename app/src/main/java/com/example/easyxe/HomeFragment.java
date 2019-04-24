@@ -98,9 +98,9 @@ public class HomeFragment extends Fragment {
 
         listProducts = (ListView) view.findViewById(R.id.listProducts);
 
-        Product product1 = new Product(1, "Xe 67 zin", 26000000.0, "Hà Nội", "Thắng", "xe_67");
-        Product product2 = new Product(2, "Xe SuperDream", 26000000.0, "Hà Nội", "Thắng", "superdream");
-        Product product3 = new Product(3, "AirBlade", 26000000.0, "TP. Hồ Chí Minh", "Nhựt", "airblade");
+        Product product1 = new Product(1, "Xe 67 zin", 26000000.0, "Hà Nội", "Thắng", R.mipmap.xe_67);
+        Product product2 = new Product(2, "Xe SuperDream", 26000000.0, "Hà Nội", "Thắng", R.mipmap.airblade);
+        Product product3 = new Product(3, "AirBlade", 26000000.0, "TP. Hồ Chí Minh", "Nhựt", R.mipmap.superdream);
 
         Product[] products = new Product[]{product1, product2, product3};
 

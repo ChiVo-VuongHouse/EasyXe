@@ -72,5 +72,16 @@
     </string-array>
     <string name="title_activity_screen19">Screen19Activity</string>
     <string name="toolbar_title_19">Sửa thông tin cá nhân</string>
+    <string name="title_activity_admin">AdminActivity</string>
+    <string name="admin_title_home">Quản lý bài đăng</string>
+    <string name="admin_title_notifi">Quản lý bài vi phạm</string>
+    <string name="admin_title_person">Quản lý người dùng</string>
+    <string name="admin_title_more">Chức năng khác</string>
+    <string name="action_search">Tìm kiếm</string>
+
+    <string name="item_admin_8_text">%1$s | %2$f đ</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

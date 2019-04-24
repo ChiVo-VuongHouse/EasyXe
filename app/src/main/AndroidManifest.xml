@@ -8,18 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:hardwareAccelerated="true"
         android:theme="@style/AppTheme">
 
-
-
-        <activity android:name=".MHDangKy" />
-        <activity android:name=".MHDangNhap" />
-
-        <!--MAIN-->
+        <!--launch Screen-->
         <activity
-            android:name=".MainActivity"
-            android:label="EasyXE"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".LaunchActivity"
+            android:theme="@style/LaunchTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +22,28 @@
             </intent-filter>
         </activity>
 
-        <!--SCREEN19-->
+
+        <!--ADMIN-->
+        <activity
+            android:name=".AdminActivity"
+            android:label="@string/title_activity_admin"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+
+        <activity android:name=".MHDangKy" />
+        <activity android:name=".MHDangNhap" />
+
+
+        <!-- MAIN -->
+        <activity
+            android:name=".MainActivity"
+            android:label="EasyXE"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <!-- SCREEN19 -->
         <activity
             android:name=".Screen19Activity"
             android:label="@string/title_activity_screen19"
