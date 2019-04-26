@@ -1,4 +1,4 @@
-package com.example.easyxe;
+package com.example.easyxe.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.easyxe.activities.MHDangKy;
+import com.example.easyxe.activities.MHDangNhap;
+
 public class DangXuat extends Fragment {
     private Button btnDangNhap;
     private Button btnDangKi;

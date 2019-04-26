@@ -1,7 +1,6 @@
-package com.example.easyxe;
+package com.example.easyxe.adapters;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.easyxe.models.Product;
+import com.example.easyxe.R;
 
 import java.util.List;
 
@@ -65,9 +67,9 @@ public class CustomListAdapter extends BaseAdapter {
         }
 
         Product product = this.productList.get(position);
-        holder.name.setText(product.name);
-        holder.price.setText(product.price + " đ");
-        holder.location.setText(product.location);
+        holder.name.setText(product.getName());
+        holder.price.setText(product.getPrice() + " đ");
+        holder.location.setText(product.getLocation());
         holder.product_thumbnail.setImageResource(product.getImage());
         //int imageId = this.getMipmapResIdByName(product.image);
 

@@ -13,45 +13,50 @@
 
         <!--launch Screen-->
         <activity
-            android:name=".LaunchActivity"
+            android:name=".activities.LaunchActivity"
             android:theme="@style/LaunchTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
 
         <!--ADMIN-->
         <activity
-            android:name=".AdminActivity"
+            android:name=".activities.AdminMainActivity"
             android:label="@string/title_activity_admin"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
 
-        <activity android:name=".MHDangKy" />
-        <activity android:name=".MHDangNhap" />
+        <activity android:name=".activities.MHDangKy" />
+        <activity android:name=".activities.MHDangNhap" />
 
 
         <!-- MAIN -->
         <activity
-            android:name=".MainActivity"
+
+            android:name=".activities.UserMainActivity"
             android:label="EasyXE"
             android:theme="@style/AppTheme.NoActionBar">
+
+
 
         </activity>
 
         <!-- SCREEN19 -->
         <activity
-            android:name=".Screen19Activity"
+            android:name=".activities.Screen19Activity"
             android:label="@string/title_activity_screen19"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activities.UserMainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.easyxe.MainActivity" />
+                android:value="com.example.easyxe.activities.UserMainActivity" />
         </activity>
 
 

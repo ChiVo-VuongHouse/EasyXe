@@ -1,9 +1,11 @@
-package com.example.easyxe;
+package com.example.easyxe.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.example.easyxe.R;
 
 public class SellProductActivity extends AppCompatActivity {
     @Override

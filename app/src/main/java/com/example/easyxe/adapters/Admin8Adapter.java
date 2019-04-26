@@ -1,19 +1,20 @@
-package com.example.easyxe;
+package com.example.easyxe.adapters;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.media.AudioAttributes;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.easyxe.models.Product;
+import com.example.easyxe.R;
 
 import java.util.List;
 

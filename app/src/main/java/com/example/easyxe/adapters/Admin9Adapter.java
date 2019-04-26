@@ -1,16 +1,17 @@
-package com.example.easyxe;
+package com.example.easyxe.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.transition.AutoTransition;
-import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.easyxe.R;
+import com.example.easyxe.models.User;
 
 import java.util.List;
 

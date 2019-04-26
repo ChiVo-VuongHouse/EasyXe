@@ -1,7 +1,9 @@
-package com.example.easyxe;
+package com.example.easyxe.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.easyxe.R;
 
 public class MHDangNhap extends AppCompatActivity {
 

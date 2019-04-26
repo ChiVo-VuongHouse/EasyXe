@@ -1,4 +1,4 @@
-package com.example.easyxe;
+package com.example.easyxe.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -16,7 +16,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
+import com.example.easyxe.DangXuat;
+import com.example.easyxe.DanhGia;
+import com.example.easyxe.R;
+import com.example.easyxe.ThayDoiMatKhau;
+import com.example.easyxe.TrangThongTinCaNhan;
+import com.example.easyxe.fragments.DashboardFragment;
+import com.example.easyxe.fragments.HomeFragment;
+import com.example.easyxe.fragments.MoreFragment;
+import com.example.easyxe.fragments.NotifFragment;
+
+public class UserMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         HomeFragment.OnFragmentInteractionListener,
         DashboardFragment.OnFragmentInteractionListener,
@@ -60,7 +70,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_user_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

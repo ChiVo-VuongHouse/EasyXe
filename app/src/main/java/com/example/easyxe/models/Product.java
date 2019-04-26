@@ -1,12 +1,12 @@
-package com.example.easyxe;
+package com.example.easyxe.models;
 
 public class Product {
-    int id;
-    String name;
-    Double price;
-    String location;
-    String seller;
-    int image;
+    private int id;
+    private String name;
+    private Double price;
+    private String location;
+    private String seller;
+    private int image;
 
     public Product(int id, String name, Double price, String location, String seller, int image) {
         this.id = id;
