@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "761971630247",
+    "firebase_url": "https://easyxe-c7846.firebaseio.com",
+    "project_id": "easyxe-c7846",
+    "storage_bucket": "easyxe-c7846.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761971630247:android:32d576e610da05d4",
+        "android_client_info": {
+          "package_name": "com.example.easyxe.activities"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761971630247-7nbnlojbebbiniqn8q0epq676dur4h8b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.easyxe.activities",
+            "certificate_hash": "a171d0bc0bb8304634978cb6dd3f13091ef40aff"
+          }
+        },
+        {
+          "client_id": "761971630247-o4s36d8kpvsritrnbg39j3iv2640h8jf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAay-h6fsehbcr5Hy91LVpKBjzHaOd5SkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761971630247-o4s36d8kpvsritrnbg39j3iv2640h8jf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
