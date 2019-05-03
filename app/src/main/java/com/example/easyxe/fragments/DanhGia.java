@@ -1,4 +1,4 @@
-package com.example.easyxe;
+package com.example.easyxe.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,16 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class TrangThongTinCaNhan extends Fragment {
+import com.example.easyxe.R;
+
+public class DanhGia extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return  inflater.inflate(R.layout.trang_thong_tin_ca_nhan,container, false);
+        return  inflater.inflate(R.layout.danh_gia,container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Trang thông tin cá nhân");
+        getActivity().setTitle("Đánh giá");
     }
 }

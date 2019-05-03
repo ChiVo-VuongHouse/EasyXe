@@ -4,51 +4,33 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:hardwareAccelerated="true"
         android:theme="@style/AppTheme">
-
-        <!--launch Screen-->
+        <activity android:name=".activities.ChangePasswordActivity"></activity>
+        <activity android:name=".activities.LogoutActivity" /> <!-- launch Screen -->
         <activity
             android:name=".activities.LaunchActivity"
             android:theme="@style/LaunchTheme">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-
-
-        <!--ADMIN-->
+        </activity> <!-- ADMIN -->
         <activity
             android:name=".activities.AdminMainActivity"
             android:label="@string/title_activity_admin"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.MHDangKy" />
-        <activity android:name=".activities.MHDangNhap" />
-
-
-        <!-- MAIN -->
+        <activity android:name=".activities.MHDangNhap" /> <!-- MAIN -->
         <activity
-
             android:name=".activities.UserMainActivity"
             android:label="EasyXE"
-            android:theme="@style/AppTheme.NoActionBar">
-
-
-
-        </activity>
-
-        <!-- SCREEN19 -->
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- SCREEN19 -->
         <activity
             android:name=".activities.Screen19Activity"
             android:label="@string/title_activity_screen19"
@@ -58,8 +40,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.easyxe.activities.UserMainActivity" />
         </activity>
-
-
     </application>
 
 </manifest>

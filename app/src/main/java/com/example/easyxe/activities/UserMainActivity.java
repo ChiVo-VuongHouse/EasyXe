@@ -16,11 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.easyxe.DangXuat;
-import com.example.easyxe.DanhGia;
 import com.example.easyxe.R;
-import com.example.easyxe.ThayDoiMatKhau;
-import com.example.easyxe.TrangThongTinCaNhan;
+import com.example.easyxe.fragments.DanhGia;
 import com.example.easyxe.fragments.DashboardFragment;
 import com.example.easyxe.fragments.HomeFragment;
 import com.example.easyxe.fragments.MoreFragment;
@@ -128,10 +125,14 @@ public class UserMainActivity extends AppCompatActivity
         Fragment fragment = null;
         switch (id) {
             case R.id.nav_logout:
-                fragment = new DangXuat();
+                //thang
+                Intent intentLogout = new Intent(getApplication(), LogoutActivity.class);
+                startActivity(intentLogout);
                 break;
             case R.id.nav_change_password:
-                fragment = new ThayDoiMatKhau();
+                //thang
+                Intent intentChangePassword = new Intent(getApplication(), ChangePasswordActivity.class);
+                startActivity(intentChangePassword);
                 break;
             case R.id.nav_person:
                 fragment = new TrangThongTinCaNhan();

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.easyxe.DangXuat;
 import com.example.easyxe.R;
 
 public class MHDangKy extends AppCompatActivity {
@@ -20,7 +19,7 @@ public class MHDangKy extends AppCompatActivity {
         btnHuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MHDangKy.this, DangXuat.class);
+                Intent intent = new Intent(MHDangKy.this, LogoutActivity.class);
                 startActivity(intent);
             }
         });

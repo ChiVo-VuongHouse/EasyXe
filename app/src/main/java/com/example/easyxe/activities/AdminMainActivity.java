@@ -131,7 +131,9 @@ public class AdminMainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_change_admin_password) {
 
-        } else if (id == R.id.nav_admin_logout) {
+        }
+        else if (id == R.id.nav_admin_logout)
+        {
 
         }
 
