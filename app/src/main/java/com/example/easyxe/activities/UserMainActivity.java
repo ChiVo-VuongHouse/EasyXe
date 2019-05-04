@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.easyxe.MainActivity;
 import com.example.easyxe.R;
 import com.example.easyxe.fragments.DanhGia;
 import com.example.easyxe.fragments.DashboardFragment;
@@ -126,7 +127,7 @@ public class UserMainActivity extends AppCompatActivity
         switch (id) {
             case R.id.nav_logout:
                 //thang
-                Intent intentLogout = new Intent(getApplication(), LogoutActivity.class);
+                Intent intentLogout = new Intent(getApplication(), MainActivity.class);
                 startActivity(intentLogout);
                 break;
             case R.id.nav_change_password:

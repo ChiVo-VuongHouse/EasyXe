@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.easyxe.activities.UserMainActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button registerBtn, loginBtn;
+    private Button registerBtn, loginBtn, skipBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         //Find view by Id
         registerBtn = (Button) findViewById(R.id.register_btn);
         loginBtn = (Button) findViewById(R.id.login_btn);
+        skipBtn = (Button) findViewById(R.id.skip_btn);
 
         //Call function button
         loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -35,5 +38,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        skipBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UserMainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

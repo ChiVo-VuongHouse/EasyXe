@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-->
+This layout Login done!
+<-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/login_applogo"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/logo"
         android:layout_width="300dp"
         android:layout_height="100dp" />
 
@@ -18,13 +24,14 @@
         android:layout_below="@+id/login_applogo"
         android:background="@drawable/input_design"
         android:padding="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:hint="Phone number..."
+        android:hint="Số điện thoại"
         android:textSize="17sp"
         android:inputType="number"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -36,12 +43,11 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="6dp"
-        android:hint="Password..."
+        android:hint="Mật khẩu"
         android:textSize="17sp"
-        android:textStyle="bold"
         android:inputType="textPassword"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -57,8 +63,8 @@
             android:id="@+id/remember_me_chkb"
             style="@style/Material.Drawable.CheckBox"
             android:text="Nhớ"
-            app:cbd_strokeColor="@color/colorPrimaryDark"
-            android:textColor="@color/colorPrimaryDark"
+            app:cbd_strokeColor="@android:color/white"
+            android:textColor="@android:color/white"
             android:gravity="center_vertical"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -68,8 +74,8 @@
 
         <TextView
             android:id="@+id/forget_password_link"
-            android:text="Forgot password?"
-            android:textColor="@color/colorPrimaryDark"
+            android:text="Quên mật khẩu?"
+            android:textColor="@android:color/white"
             android:textStyle="bold"
             android:layout_marginLeft="80dp"
             android:textSize="16sp"
@@ -85,7 +91,7 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:text="Login"
+        android:text="Đăng Nhập"
         android:layout_below="@+id/linear_layout_1"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="15dp"
@@ -95,8 +101,8 @@
 
     <TextView
         android:id="@+id/admin_panel_link"
-        android:text="Are you Admin?"
-        android:textColor="@color/colorPrimaryDark"
+        android:text="Quản trị?"
+        android:textColor="@android:color/white"
         android:textStyle="bold"
         android:layout_marginLeft="80dp"
         android:layout_below="@id/login_btn"
@@ -110,8 +116,8 @@
 
     <TextView
         android:id="@+id/not_admin_panel_link"
-        android:text="You are not Admin?"
-        android:textColor="@color/colorPrimaryDark"
+        android:text="Khách hàng?"
+        android:textColor="@android:color/white"
         android:textStyle="bold"
         android:layout_marginLeft="80dp"
         android:layout_below="@id/login_btn"

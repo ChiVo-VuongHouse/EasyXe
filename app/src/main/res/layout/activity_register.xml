@@ -5,12 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/register_applogo"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="130dp"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/logo"
         android:layout_width="300dp"
         android:layout_height="100dp" />
 
@@ -19,13 +21,14 @@
         android:layout_below="@+id/register_applogo"
         android:background="@drawable/input_design"
         android:padding="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:hint="User name..."
+        android:hint="Tên người dùng"
         android:textSize="17sp"
         android:inputType="text"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -36,12 +39,12 @@
         android:padding="20dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:hint="Phone number..."
+        android:hint="Số điện thoại"
         android:textSize="17sp"
         android:layout_marginTop="6dp"
         android:inputType="number"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -53,11 +56,11 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="6dp"
-        android:hint="Password..."
+        android:hint="Mật khẩu"
         android:textSize="17sp"
         android:inputType="textPassword"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -68,11 +71,12 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:text="Create Account"
+        android:text="Tạo tài khoản"
         android:layout_below="@+id/register_password_input"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
