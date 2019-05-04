@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
         AdminLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoginButton.setText("Admin Login");
+                LoginButton.setText("Đăng nhập");
                 AdminLink.setVisibility(View.INVISIBLE);
                 NotAdminLink.setVisibility(View.VISIBLE);
                 parentDbName = "Admins";
@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
         NotAdminLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoginButton.setText("User Login");
+                LoginButton.setText("Đăng nhập");
                 AdminLink.setVisibility(View.VISIBLE);
                 NotAdminLink.setVisibility(View.INVISIBLE);
                 parentDbName = "Users";
@@ -89,16 +89,16 @@ public class LoginActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(phone))
         {
-            Toast.makeText(this,"Enter your phone number...",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Nhập số điện thoại của bạn...",Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(password))
         {
-            Toast.makeText(this,"Enter your password...",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Nhập mật khẩu của bạn...",Toast.LENGTH_SHORT).show();
         }
         else
         {
-            loadingBar.setTitle("Login Account");
-            loadingBar.setMessage("Please wait! We are checking...");
+            loadingBar.setTitle("Đăng nhập tài khoản");
+            loadingBar.setMessage("Vui lòng chờ! Chúng tôi đang kiểm tra...");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -129,7 +129,7 @@ public class LoginActivity extends AppCompatActivity {
                         {
                             if (parentDbName.equals("Admins"))
                             {
-                                Toast.makeText(LoginActivity.this, "Welcome Admin! You have logged in successfully.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Chào mừng Quản trị! Bạn đã đăng nhập thành công.", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, AdminMainActivity.class);
@@ -137,7 +137,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
                             else if (parentDbName.equals("Users"))
                             {
-                                Toast.makeText(LoginActivity.this, "Logged in successfully.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Đăng nhập thành công.", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, UserMainActivity.class);
@@ -148,7 +148,7 @@ public class LoginActivity extends AppCompatActivity {
                         else
                         {
                             loadingBar.dismiss();
-                            Toast.makeText(LoginActivity.this, "Incorrect password.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Sai mật khẩu.", Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -156,7 +156,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(LoginActivity.this, "Phone number "+ phone + " does not exits", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Số "+ phone + " không tồn tại.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                 }
             }

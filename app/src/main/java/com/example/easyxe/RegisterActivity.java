@@ -53,14 +53,14 @@ public class RegisterActivity extends AppCompatActivity {
         String password = InputPassword.getText().toString();
 
         if (TextUtils.isEmpty(name)) {
-            Toast.makeText(this, "Enter your name...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Nhập tên của bạn...", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(phone)) {
-            Toast.makeText(this, "Enter your phone number...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Nhập số điện thoại của bạn...", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "Enter your password...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Nhập mật khẩu của bạn...", Toast.LENGTH_SHORT).show();
         } else {
-            loadingBar.setTitle("Create Account");
-            loadingBar.setMessage("Please wait! We are checking...");
+            loadingBar.setTitle("Tạo tài khoản");
+            loadingBar.setMessage("Vui lòng chờ! Chúng tôi đang kiểm tra...");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -87,21 +87,21 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(RegisterActivity.this, "Account created successfully.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Tài khoản được tạo thành công.", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
 
                                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                         startActivity(intent);
                                     } else {
                                         loadingBar.dismiss();
-                                        Toast.makeText(RegisterActivity.this, "Network error! Please try again...", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Lỗi mạng! Vui lòng thử lại...", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
                 } else {
-                    Toast.makeText(RegisterActivity.this, "Phone number " + phone + " exits.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Số " + phone + " đã tồn tại.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
-                    Toast.makeText(RegisterActivity.this, "Please try another phone number.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Vui lòng thử với một số điện thoại khác.", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                     startActivity(intent);
