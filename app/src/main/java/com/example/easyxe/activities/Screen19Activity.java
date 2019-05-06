@@ -33,7 +33,6 @@ public class Screen19Activity extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.toolbar_title_19);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_chevron_left_black_24dp);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getBundleData();
 

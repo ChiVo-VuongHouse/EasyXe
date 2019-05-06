@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.easyxe.R;
 import com.example.easyxe.fragments.DanhGia;
@@ -123,6 +124,7 @@ public class UserMainActivity extends AppCompatActivity
 
     private void displaySelectedScreen(int id) {
         Fragment fragment = null;
+        Intent intent = null;
         switch (id) {
             case R.id.nav_logout:
                 //thang
@@ -131,8 +133,9 @@ public class UserMainActivity extends AppCompatActivity
                 break;
             case R.id.nav_change_password:
                 //thang
-                Intent intentChangePassword = new Intent(getApplication(), ChangePasswordActivity.class);
-                startActivity(intentChangePassword);
+
+                intent = new Intent(getApplication(), ChangePasswordActivity.class);
+                startActivity(intent);
                 break;
             case R.id.nav_person:
                 fragment = new TrangThongTinCaNhan();
