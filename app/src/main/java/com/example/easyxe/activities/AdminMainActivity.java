@@ -17,11 +17,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.easyxe.R;
 import com.example.easyxe.fragments.Admin_8_Fragment;
 import com.example.easyxe.fragments.Admin_9_Fragment;
 import com.example.easyxe.models.User;
+import com.example.easyxe.models.Users;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,12 +34,16 @@ public class AdminMainActivity extends AppCompatActivity
     ImageView mAdImg;
     TextView mAdName;
     TextView mAdPhone;
+    Users users;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_main);
 
-
+        Intent intent = getIntent();
+        users = intent.getParcelableExtra("userData");
+        Toast.makeText(this, users.getName(), Toast.LENGTH_SHORT).show();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -66,7 +72,7 @@ public class AdminMainActivity extends AppCompatActivity
 
 
         mData = new ArrayList<>();
-        mData.add(new User("Admin 1","Hạ Long","012112121","45 Lâm Thạnh",R.drawable.image2));
+        mData.add(new User(users.getName(),"Hạ Long",users.getPhone(),"45 Lâm Thạnh",R.drawable.image2));
 
         mAdName.setText(mData.get(0).getmUserName());
         mAdImg.setImageResource(mData.get(0).getmImage());

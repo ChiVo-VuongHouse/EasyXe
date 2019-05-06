@@ -1,4 +1,4 @@
-package com.example.easyxe;
+package com.example.easyxe.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.easyxe.activities.UserMainActivity;
+import com.example.easyxe.R;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginOptionActivity extends AppCompatActivity {
 
     private Button registerBtn, loginBtn, skipBtn;
 
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(LoginOptionActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(LoginOptionActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         skipBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, UserMainActivity.class);
+                Intent intent = new Intent(LoginOptionActivity.this, UserMainActivity.class);
                 startActivity(intent);
             }
         });

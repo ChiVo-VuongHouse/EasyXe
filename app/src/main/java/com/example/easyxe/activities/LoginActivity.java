@@ -1,4 +1,4 @@
-package com.example.easyxe;
+package com.example.easyxe.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,8 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.easyxe.activities.AdminMainActivity;
-import com.example.easyxe.activities.UserMainActivity;
+import com.example.easyxe.R;
 import com.example.easyxe.models.Users;
 import com.example.easyxe.prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
@@ -34,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private String parentDbName = "Users";
     private CheckBox chkBoxRememberMe;
+    Users usersData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,7 +122,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.child(parentDbName).child(phone).exists())
                 {
-                    Users usersData = dataSnapshot.child(parentDbName).child(phone).getValue(Users.class);
+                    usersData = dataSnapshot.child(parentDbName).child(phone).getValue(Users.class);
                     if (usersData.getPhone().equals(phone))
                     {
                         if (usersData.getPassword().equals(password))
@@ -133,6 +133,7 @@ public class LoginActivity extends AppCompatActivity {
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, AdminMainActivity.class);
+                                intent.putExtra("userData", usersData);
                                 startActivity(intent);
                             }
                             else if (parentDbName.equals("Users"))
