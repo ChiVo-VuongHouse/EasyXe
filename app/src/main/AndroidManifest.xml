@@ -11,40 +11,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.RegisterActivity"></activity>
+        <activity
+            android:name=".activities.LaunchActivity"
+            android:theme="@style/LaunchTheme">
+        </activity>
+
+        <activity android:name=".activities.LoginOptionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".activities.LogoutActivity" />
+
+        <activity android:name=".activities.RegisterActivity"/>
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.ChangePassword" />
         <activity android:name=".activities.PersonalActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.LoginOptionActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.LogoutActivity" /> <!-- launch Screen -->
-        <activity
-            android:name=".activities.LaunchActivity"
-            android:theme="@style/LaunchTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- ADMIN -->
+
         <activity
             android:name=".activities.AdminMainActivity"
             android:label="@string/title_activity_admin"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.MHDangKy" />
-        <activity android:name=".activities.MHDangNhap" /> <!-- MAIN -->
+        <activity android:name=".activities.MHDangNhap" />
         <activity
             android:name=".activities.UserMainActivity"
             android:label="EasyXE"
-            android:theme="@style/AppTheme.NoActionBar" /> <!-- SCREEN19 -->
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.Screen19Activity"
+            android:name=".activities.EditInfo"
             android:label="@string/title_activity_screen19"
             android:parentActivityName=".activities.UserMainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -52,6 +53,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.easyxe.activities.UserMainActivity" />
         </activity>
+
     </application>
 
 </manifest>

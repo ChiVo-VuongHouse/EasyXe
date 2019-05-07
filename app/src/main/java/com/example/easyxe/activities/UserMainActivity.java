@@ -1,7 +1,6 @@
 package com.example.easyxe.activities;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -9,21 +8,15 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.easyxe.R;
-import com.example.easyxe.adapters.DashboardPagerAdapter;
-import com.example.easyxe.fragments.DanhGia;
 import com.example.easyxe.fragments.DashboardFragment;
-import com.example.easyxe.fragments.DashboardSelling;
-import com.example.easyxe.fragments.Fragment_Rate;
 import com.example.easyxe.fragments.HomeFragment;
 import com.example.easyxe.fragments.MoreFragment;
 import com.example.easyxe.fragments.NotifFragment;
@@ -140,7 +133,7 @@ public class UserMainActivity extends AppCompatActivity
                 intent = new Intent(getApplication(), PersonalActivity.class);
                 break;
             case R.id.nav_setting:
-                Intent intent4 = new Intent(getApplication(),Screen19Activity.class);
+                Intent intent4 = new Intent(getApplication(), EditInfo.class);
                 startActivity(intent4);
                 break;
             case R.id.nav_product:

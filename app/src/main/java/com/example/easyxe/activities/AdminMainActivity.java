@@ -20,8 +20,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.easyxe.R;
-import com.example.easyxe.fragments.Admin_8_Fragment;
-import com.example.easyxe.fragments.Admin_9_Fragment;
+import com.example.easyxe.fragments.AdminHome;
+import com.example.easyxe.fragments.ReportsManger;
+import com.example.easyxe.fragments.UsersManager;
+import com.example.easyxe.fragments.MoreFragment;
 import com.example.easyxe.models.User;
 import com.example.easyxe.models.Users;
 
@@ -127,21 +129,20 @@ public class AdminMainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.nav_admin_setting) {
-            //chuyển dữ liệu
-            Intent intent = new Intent(getApplication(),Screen19Activity.class);
-            intent.putParcelableArrayListExtra("data",(ArrayList) mData);
-            startActivity(intent);
-
-
-        } else if (id == R.id.nav_change_admin_password) {
-
+        Intent intent = null;
+        switch (id) {
+            case R.id.nav_admin_setting:
+                intent = new Intent(getApplication(), EditInfo.class);
+                //chuyển dữ liệu
+                intent.putParcelableArrayListExtra("data", (ArrayList) mData);
+                break;
+            case R.id.nav_change_admin_password:
+                break;
+            case R.id.nav_admin_logout:
+                intent = new Intent(getApplication(), LoginOptionActivity.class);
+                break;
         }
-        else if (id == R.id.nav_admin_logout)
-        {
-
-        }
+        startActivity(intent);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -160,17 +161,19 @@ public class AdminMainActivity extends AppCompatActivity
             switch (item.getItemId()) {
                 case R.id.nav_home:
                     getSupportActionBar().setTitle(R.string.admin_title_home);
+                    fragment = new AdminHome();
                     break;
                 case R.id.nav_notifi:
                     getSupportActionBar().setTitle(R.string.admin_title_notifi);
-                    fragment = new Admin_8_Fragment();
+                    fragment = new ReportsManger();
                     break;
                 case R.id.nav_person:
                     getSupportActionBar().setTitle(R.string.admin_title_person);
-                    fragment = new Admin_9_Fragment();
+                    fragment = new UsersManager();
                     break;
                 case R.id.nav_more:
                     getSupportActionBar().setTitle(R.string.admin_title_more);
+                    fragment = new MoreFragment();
                     break;
             }
             loadFragment(fragment);

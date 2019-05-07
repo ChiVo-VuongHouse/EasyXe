@@ -16,7 +16,7 @@ import com.example.easyxe.models.User;
 import java.util.List;
 
 
-public class Screen19Activity extends AppCompatActivity {
+public class EditInfo extends AppCompatActivity {
     Button btnOK;
     List<User> mData;
     TextInputEditText mAdName;

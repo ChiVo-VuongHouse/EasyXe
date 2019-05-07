@@ -30,12 +30,12 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Admin_9_Fragment extends Fragment {
+public class UsersManager extends Fragment {
     private  List<Users> userList;
     private RecyclerView recyclerView1;
     private Admin9Adapter admin9Adapter;
 
-    public Admin_9_Fragment() {
+    public UsersManager() {
         // Required empty public constructor
     }
 

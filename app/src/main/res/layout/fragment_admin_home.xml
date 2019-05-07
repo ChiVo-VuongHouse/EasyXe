@@ -2,17 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.easyxe.fragments.UsersManager"
-    >
+    tools:context="com.example.easyxe.fragments.AdminHome">
 
-    <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvAdmin9"
+        android:id="@+id/rv_admin_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="?attr/actionBarSize"
-        tools:listitem="@layout/item_admin_9">
-
-    </android.support.v7.widget.RecyclerView>
+        tools:listitem="@layout/item_admin_home"/>
 
 </FrameLayout>

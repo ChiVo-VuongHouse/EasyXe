@@ -22,10 +22,10 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Admin_8_Fragment extends Fragment {
+public class ReportsManger extends Fragment {
     private List<Product> mData;
 
-    public Admin_8_Fragment() {
+    public ReportsManger() {
         // Required empty public constructor
     }
 
