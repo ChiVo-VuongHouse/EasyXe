@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/padding_top_followings"
+    android:paddingLeft="@dimen/padding_left_followings">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/avatarFollowings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/ic_launcher"/>
+
+    </LinearLayout>
+
+    //
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/followingsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#747474"
+            android:text="@string/name_Followings"
+            android:textSize="@dimen/textSize_name_Followings"
+            android:layout_marginLeft="@dimen/margin_left_Followings"/>
+
+        <TextView
+            android:id="@+id/Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#747474"
+            android:text="@string/address"
+            android:textSize="@dimen/textSize_price"
+            android:layout_marginLeft="@dimen/margin_left_Followings"/>
+
+    </LinearLayout>
+
+</LinearLayout>
