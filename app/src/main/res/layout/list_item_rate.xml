@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/padding_top_rate"
+    android:paddingLeft="@dimen/padding_left_rate">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/avatarRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_launcher"/>
+
+    </LinearLayout>
+
+    //
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <RatingBar
+            android:id="@+id/rating_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/RatingBar"
+            style="?android:attr/ratingBarStyleSmall"/>
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_Rate"
+            android:textColor="#747474"
+            android:textSize="@dimen/textSize_name_rate"
+            android:layout_marginLeft="@dimen/margin_left_rate"/>
+
+        <TextView
+            android:id="@+id/report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/comment"
+            android:textColor="#747474"
+            android:textSize="@dimen/textSize_comment"
+            android:layout_marginLeft="@dimen/margin_left_rate" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
