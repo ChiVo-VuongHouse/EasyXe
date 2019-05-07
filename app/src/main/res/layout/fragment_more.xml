@@ -6,9 +6,16 @@
     tools:context=".fragments.MoreFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Fragment more" />
+        android:dividerHeight="1dp"
+        android:divider="#EDEDED">
+
+    </ExpandableListView>
 
 </FrameLayout>
