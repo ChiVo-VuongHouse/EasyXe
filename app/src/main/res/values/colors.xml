@@ -21,4 +21,10 @@
     <color name="color_spinner">#ADADAD</color>
     <color name="color_btn_submit">#00BCD4</color>
 
+    /sang
+    <color name="background">#FAFAFA</color>
+    <color name="duskYellow">#FFF200</color>
+    <color name="duskSiver">#AAAAAA</color>
+    <color name="backgroundButtonAdd">#FAFAFA</color>
+
 </resources>

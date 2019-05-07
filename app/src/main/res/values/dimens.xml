@@ -14,5 +14,45 @@
     <dimen name="btn_submit">18sp</dimen>
     <dimen name="small_margin">8dp</dimen>
 
+    // Rate
+    <dimen name="padding_left_rate">20dp</dimen>
+    <dimen name="padding_top_rate">20dp</dimen>
+    <dimen name="textSize_name_rate">15dp</dimen>
+    <dimen name="margin_left_rate">10dp</dimen>
+    <dimen name="textSize_comment">10dp</dimen>
+
+
+    // Product
+    <dimen name="padding_top_product">20dp</dimen>
+    <dimen name="padding_left_product">20dp</dimen>
+    <dimen name="textSize_name_product">15dp</dimen>
+    <dimen name="margin_left_product">10dp</dimen>
+    <dimen name="textSize_price">10dp</dimen>
+    <dimen name="margin_left_price">10dp</dimen>
+
+    // Followings
+    <dimen name="padding_top_followings">20dp</dimen>
+    <dimen name="padding_left_followings">20dp</dimen>
+    <dimen name="textSize_name_Followings">15dp</dimen>
+    <dimen name="margin_left_Followings">10dp</dimen>
+    <dimen name="textSize_address">10dp</dimen>
+
+    // Followers
+    <dimen name="padding_top_followers">20dp</dimen>
+    <dimen name="padding_left_followers">20dp</dimen>
+    <dimen name="textSize_name_Followers">15dp</dimen>
+    <dimen name="margin_left_Followers">10dp</dimen>
+    <dimen name="paddingTop_textView">20dp</dimen>
+
+    // Expandable
+    <dimen name="padding_top_expandable">5dp</dimen>
+    <dimen name="padding_bottom_expandable">5dp</dimen>
+    <dimen name="textSize_expandable">16dip</dimen>
+
+    // List group
+    <dimen name="padding_top_listGroup">20dp</dimen>
+    <dimen name="padding_bottom_listGroup">20dp</dimen>
+    <dimen name="textSize_listGroup">13.5dp</dimen>
+
 
 </resources>

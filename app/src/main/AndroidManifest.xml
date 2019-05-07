@@ -13,6 +13,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.RegisterActivity"></activity>
         <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.PersonalActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activities.LoginOptionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,9 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.ChangePasswordActivity"
-           />
         <activity android:name=".activities.LogoutActivity" /> <!-- launch Screen -->
         <activity
             android:name=".activities.LaunchActivity"
