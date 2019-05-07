@@ -7,22 +7,24 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.easyxe.R;
 import com.example.easyxe.fragments.DashboardExpired;
 import com.example.easyxe.fragments.DashboardOutofProducts;
-import com.example.easyxe.R;
 import com.example.easyxe.fragments.DashboardSelling;
+import com.example.easyxe.fragments.NotifFollowers;
+import com.example.easyxe.fragments.NotifFollowings;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class DashboardPagerAdapter extends FragmentPagerAdapter {
+public class NotifPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.dashboard_tab_text_1, R.string.dashboard_tab_text_2, R.string.dashboard_tab_text_3};
+    private static final int[] TAB_TITLES = new int[]{R.string.notif_tab_text_1, R.string.notif_tab_text_2};
     private final Context mContext;
 
-    public DashboardPagerAdapter(Context context, FragmentManager fm) {
+    public NotifPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -32,13 +34,10 @@ public class DashboardPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new DashboardSelling();
+                fragment = new NotifFollowings();
                 break;
             case 1:
-                fragment = new DashboardExpired();
-                break;
-            case 2:
-                fragment = new DashboardOutofProducts();
+                fragment = new NotifFollowers();
                 break;
         }
         return fragment;
@@ -53,6 +52,6 @@ public class DashboardPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 3;
+        return 2;
     }
 }

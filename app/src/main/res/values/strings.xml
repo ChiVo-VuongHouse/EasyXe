@@ -123,8 +123,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     // Dashboard Fragment
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="tab_text_3">Tab 3</string>
+    <string name="dashboard_tab_text_1">Đang bán</string>
+    <string name="dashboard_tab_text_2">Hết hạn</string>
+    <string name="dashboard_tab_text_3">Hết hàng</string>
+    <string name="notif_tab_text_1">Tin theo dõi</string>
+    <string name="notif_tab_text_2">Người theo dõi</string>
 
 </resources>

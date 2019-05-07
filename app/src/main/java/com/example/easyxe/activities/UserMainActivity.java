@@ -9,6 +9,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,18 +19,19 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.easyxe.R;
+import com.example.easyxe.adapters.DashboardPagerAdapter;
 import com.example.easyxe.fragments.DanhGia;
 import com.example.easyxe.fragments.DashboardFragment;
+import com.example.easyxe.fragments.DashboardSelling;
+import com.example.easyxe.fragments.Fragment_Rate;
 import com.example.easyxe.fragments.HomeFragment;
 import com.example.easyxe.fragments.MoreFragment;
 import com.example.easyxe.fragments.NotifFragment;
 
 public class UserMainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,
-        HomeFragment.OnFragmentInteractionListener,
-        NotifFragment.OnFragmentInteractionListener,
-        MoreFragment.OnFragmentInteractionListener
-{
+        implements NavigationView.OnNavigationItemSelectedListener {
+
+    BottomNavigationView bottomNavigationView;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -82,8 +84,8 @@ public class UserMainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         loadFragment(new HomeFragment());
 
@@ -122,36 +124,34 @@ public class UserMainActivity extends AppCompatActivity
     }
 
     private void displaySelectedScreen(int id) {
-        Fragment fragment = null;
         Intent intent = null;
         switch (id) {
             case R.id.nav_logout:
                 //thang
-                Intent intentLogout = new Intent(getApplication(), LoginOptionActivity.class);
-                startActivity(intentLogout);
+                intent = new Intent(getApplication(), LoginOptionActivity.class);
                 break;
             case R.id.nav_change_password:
                 intent = new Intent(getApplication(), ChangePassword.class);
-                startActivity(intent);
                 break;
             case R.id.nav_person:
-                Intent intent1 = new Intent(getApplication(), PersonalActivity.class);
-                startActivity(intent1);
+                intent = new Intent(getApplication(), PersonalActivity.class);
                 break;
             case R.id.nav_rating:
-                fragment = new DanhGia();
+                intent = new Intent(getApplication(), PersonalActivity.class);
                 break;
             case R.id.nav_setting:
                 Intent intent4 = new Intent(getApplication(),Screen19Activity.class);
                 startActivity(intent4);
                 break;
+            case R.id.nav_product:
+                Fragment dashboardFragment = new DashboardFragment();
+                loadFragment(dashboardFragment);
+                bottomNavigationView.setSelectedItemId(R.id.navigation_dashboard);
+                break;
+        }
+        if (intent != null)
+            startActivity(intent);
 
-        }
-        if (fragment != null) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.main_layout, fragment);
-            ft.commit();
-        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
@@ -165,8 +165,5 @@ public class UserMainActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
 
-    }
 }
