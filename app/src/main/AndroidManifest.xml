@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.RegisterActivity"></activity>
         <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.ChangePassword" />
         <activity android:name=".activities.PersonalActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activities.LoginOptionActivity">

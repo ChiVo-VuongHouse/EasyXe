@@ -132,9 +132,8 @@ public class UserMainActivity extends AppCompatActivity
                 startActivity(intentLogout);
                 break;
             case R.id.nav_change_password:
-                //thang
-//                intent = new Intent(getApplication(), LoginActivity.class);
-//                startActivity(intent);
+                intent = new Intent(getApplication(), ChangePassword.class);
+                startActivity(intent);
                 break;
             case R.id.nav_person:
                 Intent intent1 = new Intent(getApplication(), PersonalActivity.class);
