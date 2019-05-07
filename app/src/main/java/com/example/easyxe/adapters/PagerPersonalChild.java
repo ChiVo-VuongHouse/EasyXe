@@ -1,4 +1,4 @@
-package com.example.easyxe.activities;
+package com.example.easyxe.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

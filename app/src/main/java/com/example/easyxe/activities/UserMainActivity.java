@@ -27,7 +27,6 @@ import com.example.easyxe.fragments.NotifFragment;
 public class UserMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         HomeFragment.OnFragmentInteractionListener,
-        DashboardFragment.OnFragmentInteractionListener,
         NotifFragment.OnFragmentInteractionListener,
         MoreFragment.OnFragmentInteractionListener
 {

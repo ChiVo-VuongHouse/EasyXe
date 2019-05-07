@@ -54,5 +54,8 @@
     <dimen name="padding_bottom_listGroup">20dp</dimen>
     <dimen name="textSize_listGroup">13.5dp</dimen>
 
+    // DashboardFragment
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
 
 </resources>
