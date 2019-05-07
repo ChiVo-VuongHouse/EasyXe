@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageButton2"
+                android:layout_width="87dp"
+                android:layout_height="89dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/textView_Name"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_Address"
+                android:textAlignment="center" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:theme="@style/RatingBar"
+                android:isIndicator="true"
+                style="?android:attr/ratingBarStyle"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:id="@+id/imageButtonPhone"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/background"
+                app:srcCompat="@drawable/ic_local_phone_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonMessage"
+                android:layout_width="59dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/background"
+                app:srcCompat="@drawable/ic_email_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonFollow"
+                android:layout_width="57dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/background"
+                app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonStore"
+                android:layout_width="60dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/background"
+                app:srcCompat="@drawable/ic_store_black_24dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="#747474">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabProducts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_itemProduct"/>
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_itemRate" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabFollowers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_itemFollowers" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabFollowing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_itemFollowing" />
+
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/personal_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
