@@ -15,11 +15,64 @@
       },
       "oauth_client": [
         {
+          "client_id": "761971630247-16eit1m92go61tf1qarb3nq0n96d7lne.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.easyxe.activities",
+            "certificate_hash": "f26b9a17178df741dcdfd2d9611b2b76c5dbaf82"
+          }
+        },
+        {
+          "client_id": "761971630247-cfhfb7uvfva644ljqqp252dfka5o9k7u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.easyxe.activities",
+            "certificate_hash": "5d80c630895af2a5da3d9bcdc420972abfded27f"
+          }
+        },
+        {
           "client_id": "761971630247-7nbnlojbebbiniqn8q0epq676dur4h8b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.easyxe.activities",
             "certificate_hash": "a171d0bc0bb8304634978cb6dd3f13091ef40aff"
+          }
+        },
+        {
+          "client_id": "761971630247-o4s36d8kpvsritrnbg39j3iv2640h8jf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAay-h6fsehbcr5Hy91LVpKBjzHaOd5SkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761971630247-o4s36d8kpvsritrnbg39j3iv2640h8jf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761971630247:android:08d85599de84a1b5",
+        "android_client_info": {
+          "package_name": "com.example.easyxeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761971630247-d4n6e7qipcv3ffe59ftailde2divjmf3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.easyxeapp",
+            "certificate_hash": "6c65b2ec6167bd26188906e15738131dffbf7e82"
           }
         },
         {
