@@ -133,12 +133,12 @@ public class UserMainActivity extends AppCompatActivity
                 break;
             case R.id.nav_change_password:
                 //thang
-
-                intent = new Intent(getApplication(), ChangePasswordActivity.class);
-                startActivity(intent);
+//                intent = new Intent(getApplication(), LoginActivity.class);
+//                startActivity(intent);
                 break;
             case R.id.nav_person:
-                fragment = new TrangThongTinCaNhan();
+                Intent intent1 = new Intent(getApplication(), PersonalActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.nav_rating:
                 fragment = new DanhGia();

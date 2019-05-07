@@ -90,6 +90,34 @@
     <string name="txtGioiTinh">Giới tính</string>
     <string name="txtInputPhone">Nhập số điện thoại đã đăng ký</string>
 
+    //sang
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="tab_item1">Tổng quan</string>
+    <string name="tab_item2">Chi tiết</string>
+    <string name="tab_itemProduct">SẢN PHẨM</string>
+    <string name="tab_itemRate">ĐÁNH GIÁ</string>
+    <string name="tab_itemFollowers">FOLLOWERS</string>
+    <string name="tab_itemFollowing">FOLLOWINGS</string>
+
+    <string name="textView_Name">Họ và tên</string>
+    <string name="textView_Address">Địa chỉ</string>
+
+    // Rate
+    <string name="name_Rate">Mediline Kennedy</string>
+    <string name="comment">Ủng hộ</string>
+
+    // Product
+    <string name="name_Product">Lamboghini</string>
+    <string name="price">2000000000</string>
+
+    // Followings
+    <string name="name_Followings">Medeline Kennedy</string>
+    <string name="address">Hà Nội</string>
+
+    // Followers
+    <string name="name_Followers">Medeline Kennedy</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
