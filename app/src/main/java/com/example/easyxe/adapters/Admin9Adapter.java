@@ -1,6 +1,8 @@
 package com.example.easyxe.adapters;
 
+import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,21 +11,25 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.easyxe.R;
+import com.example.easyxe.activities.PersonalActivity;
 import com.example.easyxe.models.User;
+import com.example.easyxe.models.Users;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class Admin9Adapter extends RecyclerView.Adapter<Admin9Adapter.myViewHolder> {
-
-    private List<User> mUserList;
+    private List<Users> mUsersList;
     private Context context;
 
-    public Admin9Adapter(Context context, List<User> userList)
+
+    public Admin9Adapter(Context context, List<Users> userList)
     {
         this.context = context;
-        this.mUserList = userList;
+        this.mUsersList = userList;
     }
     @NonNull
     @Override
@@ -34,11 +40,25 @@ public class Admin9Adapter extends RecyclerView.Adapter<Admin9Adapter.myViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final myViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull final myViewHolder myViewHolder, final int i) {
 
-        myViewHolder.mUserImg.setImageResource(mUserList.get(i).getmImage());
-        myViewHolder.mName.setText(mUserList.get(i).getmUserName());
-        myViewHolder.mCity.setText(mUserList.get(i).getmUserCity());
+        String image = mUsersList.get(i).getImage();
+        final String name = mUsersList.get(i).getName();
+        String phone = mUsersList.get(i).getPhone();
+
+
+        // set holder
+
+        myViewHolder.mName.setText(name);
+        myViewHolder.mPhone.setText(phone);
+        try {
+            Picasso.get().load(image)
+                    .placeholder(R.drawable.image)
+                    .into(myViewHolder.mUserImg);
+        }catch (Exception e)
+        {
+
+        }
 
         myViewHolder.mExpand.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,26 +78,37 @@ public class Admin9Adapter extends RecyclerView.Adapter<Admin9Adapter.myViewHold
             }
         });
 
+        myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Click " + name, Toast.LENGTH_SHORT).show();
+                Context context = v.getContext();
+                context.startActivity(new Intent(context, PersonalActivity.class));
+
+            }
+        });
 
     }
 
+
+
     @Override
     public int getItemCount() {
-        return mUserList.size();
+        return mUsersList.size();
     }
 
     public class myViewHolder extends RecyclerView.ViewHolder {
         private ImageView mUserImg;
         private ImageView mExpand;
         private TextView mName;
-        private TextView mCity;
+        private TextView mPhone;
         private LinearLayout mllExpand;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             mUserImg = itemView.findViewById(R.id.ivUserImage);
             mName = itemView.findViewById(R.id.tvUserName);
-            mCity = itemView.findViewById(R.id.tvUserLocation);
+            mPhone = itemView.findViewById(R.id.tvUserLocation);
             mExpand = itemView.findViewById(R.id.ivExpanse);
 
             mllExpand = itemView.findViewById(R.id.llExpand);

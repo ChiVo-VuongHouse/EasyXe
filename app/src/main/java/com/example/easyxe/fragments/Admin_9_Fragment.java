@@ -14,6 +14,14 @@ import android.view.ViewGroup;
 import com.example.easyxe.adapters.Admin9Adapter;
 import com.example.easyxe.R;
 import com.example.easyxe.models.User;
+import com.example.easyxe.models.Users;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +31,9 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class Admin_9_Fragment extends Fragment {
-    private List<User> mData;
+    private  List<Users> userList;
+    private RecyclerView recyclerView1;
+    private Admin9Adapter admin9Adapter;
 
     public Admin_9_Fragment() {
         // Required empty public constructor
@@ -35,24 +45,44 @@ public class Admin_9_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_admin_9, container, false);
-        RecyclerView recyclerView1 = view.findViewById(R.id.rvAdmin9);
+        recyclerView1 = view.findViewById(R.id.rvAdmin9);
         recyclerView1.setHasFixedSize(true);
         recyclerView1.setLayoutManager(new LinearLayoutManager(getActivity()));
-        Admin9Adapter admin9Adapter = new Admin9Adapter(getContext(),mData);
-        recyclerView1.setAdapter(admin9Adapter);
+
+        userList = new ArrayList<>();
+        getAllUser();
+
         return view;
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mData = new ArrayList<>();
-        mData.add(new User("Hạ","Hà Nội","0121751","12, Nguyễn Trãi",R.drawable.image));
-        mData.add(new User("Long","Thái Bình","012...51","12, Nguyễn Du",R.drawable.image2));
-        mData.add(new User("Long","Thái Bình","012...51","12, Nguyễn Du",R.drawable.image2));
-        mData.add(new User("Long","Thái Bình","012...51","12, Nguyễn Du",R.drawable.image2));
-        mData.add(new User("Long","Thái Bình","012...51","12, Nguyễn Du",R.drawable.image2));
-        mData.add(new User("Last item","Thái Bình","012...51","12, Nguyễn Du",R.drawable.image2));
+    private void getAllUser() {
+        //get current user
+        final FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
+        //get path of data names
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                userList.clear();
+                for (DataSnapshot ds: dataSnapshot.getChildren())
+                {
+                    Users users = ds.getValue(Users.class);
+//                    if (!users.getPhone().equals(mUser.getPhoneNumber())) {
+//                        userList.add(users);
+//                    }
+                    userList.add(users);
+                    admin9Adapter = new Admin9Adapter(getActivity(),userList);
+                    recyclerView1.setAdapter(admin9Adapter);
 
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
+
+
 }
