@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,6 +18,8 @@ import com.example.easyxe.R;
 import com.example.easyxe.activities.PersonalActivity;
 import com.example.easyxe.models.User;
 import com.example.easyxe.models.Users;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -44,7 +47,7 @@ public class Admin9Adapter extends RecyclerView.Adapter<Admin9Adapter.myViewHold
 
         String image = mUsersList.get(i).getImage();
         final String name = mUsersList.get(i).getName();
-        String phone = mUsersList.get(i).getPhone();
+        final String phone = mUsersList.get(i).getPhone();
 
 
         // set holder
@@ -88,6 +91,17 @@ public class Admin9Adapter extends RecyclerView.Adapter<Admin9Adapter.myViewHold
             }
         });
 
+        myViewHolder.mXoa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //lấy path
+                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Users").child(phone);
+                 reference.removeValue();
+                 notifyDataSetChanged();
+
+            }
+        });
+
     }
 
 
@@ -101,6 +115,7 @@ public class Admin9Adapter extends RecyclerView.Adapter<Admin9Adapter.myViewHold
         private ImageView mUserImg;
         private ImageView mExpand;
         private TextView mName;
+        private Button mXoa;
         private TextView mPhone;
         private LinearLayout mllExpand;
 
@@ -110,8 +125,8 @@ public class Admin9Adapter extends RecyclerView.Adapter<Admin9Adapter.myViewHold
             mName = itemView.findViewById(R.id.tvUserName);
             mPhone = itemView.findViewById(R.id.tvUserLocation);
             mExpand = itemView.findViewById(R.id.ivExpanse);
-
             mllExpand = itemView.findViewById(R.id.llExpand);
+            mXoa = itemView.findViewById(R.id.btnXoa);
         }
     }
 }
