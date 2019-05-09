@@ -54,6 +54,9 @@
                 android:value="com.example.easyxe.activities.UserMainActivity" />
         </activity>
 
+        <activity android:name=".activities.UserCategoryActivity"/>
+        <activity android:name=".activities.UserAddNewProductsActivity"/>
+
     </application>
 
 </manifest>
